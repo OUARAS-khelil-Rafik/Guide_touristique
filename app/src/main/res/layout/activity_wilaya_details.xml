@@ -38,6 +38,15 @@
             android:textStyle="bold" />
     </LinearLayout>
 
+    <!-- Wilaya Image -->
+    <ImageView
+        android:id="@+id/wilayaImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:paddingBottom="100dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/wilaya_adrar" />
+
     <!-- Wilaya Title -->
     <TextView
         android:id="@+id/wilayaTitle"
@@ -50,15 +59,6 @@
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold" />
-
-    <!-- Wilaya Image -->
-    <ImageView
-        android:id="@+id/wilayaImage"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:paddingBottom="100dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/wilaya_adrar" />
 
     <!-- Tab Menu
     <TabLayout
@@ -154,7 +154,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0"/>
+        android:layout_weight="1"/>
 
     <!-- Footer Fixé en Bas -->
     <TextView

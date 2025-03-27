@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fillViewport="true">
-
-<LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:background="@color/white"
         android:orientation="vertical"
         tools:context=".WilayaDetailsActivity">
+
     <!-- Nav Bar Fixée en Haut -->
     <LinearLayout
         android:layout_width="match_parent"
@@ -41,147 +37,385 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-    <!-- Wilaya Title -->
-    <TextView
-        android:id="@+id/wilayaTitle"
+    <!-- ScrollView pour tout le contenu en dessous de la barre de navigation -->
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:gravity="center"
-        android:text="WELCOME TO WILAYA ADRAR \n مرحبا بكم في ولاية أدرار"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <!-- Wilaya Image -->
-    <ImageView
-        android:id="@+id/wilayaImage"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/wilaya_adrar" />
-
-
-
-    <!-- Menu Bar -->
-    <HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scrollbars="horizontal">
-
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
         <LinearLayout
-            android:padding="5dp"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@drawable/nav_background">
+            android:orientation="vertical">
 
-            <Button
-                android:id="@+id/desc"
-                android:layout_width="wrap_content"
+            <!-- Wilaya Title -->
+            <TextView
+                android:id="@+id/wilayaTitle"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="5dp"
-                android:text="DESCRIPTION"
-                android:background="@android:color/transparent"
+                android:layout_margin="15dp"
+                android:gravity="center"
+                android:text="WELCOME TO WILAYA ADRAR \n مرحبا بكم في ولاية أدرار"
                 android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textAllCaps="false"/>
-            <Button
-                android:id="@+id/site_tour"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="5dp"
-                android:text="TOURIST SITES"
-                android:background="@android:color/transparent"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textAllCaps="false"/>
-            <Button
-                android:id="@+id/hotel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="5dp"
-                android:text="WHERE TO SLEEP?"
-                android:background="@android:color/transparent"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textAllCaps="false"/>
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-            <Button
-                android:id="@+id/restaurant"
-                android:layout_width="wrap_content"
+            <!-- Wilaya Image -->
+            <ImageView
+                android:id="@+id/wilayaImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/wilaya_adrar" />
+
+            <!-- Menu Bar -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="WHERE TO EAT?"
-                android:background="@android:color/transparent"
+                android:scrollbars="horizontal">
+
+
+                <LinearLayout
+                    android:padding="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/nav_background">
+
+                    <Button
+                        android:id="@+id/desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:text="DESCRIPTION"
+                        android:background="@android:color/transparent"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textAllCaps="false"/>
+                    <Button
+                        android:id="@+id/site_tour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:text="TOURIST SITES"
+                        android:background="@android:color/transparent"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textAllCaps="false"/>
+                    <Button
+                        android:id="@+id/hotel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:text="WHERE TO SLEEP?"
+                        android:background="@android:color/transparent"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textAllCaps="false"/>
+
+                    <Button
+                        android:id="@+id/restaurant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="WHERE TO EAT?"
+                        android:background="@android:color/transparent"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textAllCaps="false" />
+                </LinearLayout>
+            </HorizontalScrollView>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Section DESCRIPTION -->
+                    <TextView
+                        android:id="@+id/tv_description_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="DESCRIPTION | الوصف"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:gravity="start"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#CCCCCC"
+                        android:layout_marginBottom="8dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="This is a description in English.\n\nهذا هو الوصف باللغة العربية."
+                        android:textSize="16sp"/>
+
+                    <!-- Section SITES TOURISTIQUES -->
+                    <TextView
+                        android:id="@+id/tv_sites_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="SITES TOURISTIQUES | المواقع السياحية"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:gravity="start"
+                        android:layout_marginTop="16dp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#CCCCCC"
+                        android:layout_marginBottom="8dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_site_tour_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="This is a description in English.\n\nهذا هو الوصف باللغة العربية."
+                        android:textSize="16sp"/>
+
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:columnCount="2"
+                        android:rowCount="2"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:id="@+id/site1"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/wilaya_adrar"
+                            android:scaleType="centerCrop"
+                            android:onClick="onImageClick"/>
+
+                        <ImageView
+                            android:id="@+id/site2"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/wilaya_algiers"
+                            android:scaleType="centerCrop"
+                            android:onClick="onImageClick"/>
+
+                        <ImageView
+                            android:id="@+id/site3"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/wilaya_annaba"
+                            android:scaleType="centerCrop"
+                            android:onClick="onImageClick"/>
+
+                        <ImageView
+                            android:id="@+id/site4"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/wilaya_algiers"
+                            android:scaleType="centerCrop"
+                            android:onClick="onImageClick"/>
+
+                    </GridLayout>
+
+                    <!-- Section OU DORMIR ? -->
+                    <TextView
+                        android:id="@+id/tv_hotel_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="OU DORMIR ? | أين أنام ؟"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:gravity="start"
+                        android:layout_marginTop="16dp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#CCCCCC"
+                        android:layout_marginBottom="8dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_hotel_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="This is a description in English.\n\nهذا هو الوصف باللغة العربية."
+                        android:textSize="16sp"/>
+
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:columnCount="2"
+                        android:rowCount="2"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:id="@+id/hotel1"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/wilaya_adrar"
+                            android:scaleType="centerCrop"
+                            android:onClick="onImageClick"/>
+
+                        <ImageView
+                            android:id="@+id/hotel2"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/wilaya_annaba"
+                            android:scaleType="centerCrop"
+                            android:onClick="onImageClick"/>
+
+                        <ImageView
+                            android:id="@+id/hotel3"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/wilaya_algiers"
+                            android:scaleType="centerCrop"
+                            android:onClick="onImageClick"/>
+
+                        <ImageView
+                            android:id="@+id/hotel4"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/wilaya_algiers"
+                            android:scaleType="centerCrop"
+                            android:onClick="onImageClick"/>
+                    </GridLayout>
+
+                    <!-- Section OU MANGER ? -->
+                    <TextView
+                        android:id="@+id/tv_restaurant_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="OU MANGER ? | أين آكل ؟"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:gravity="start"
+                        android:layout_marginTop="16dp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#CCCCCC"
+                        android:layout_marginBottom="8dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_restaurant_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="This is a description in English.\n\nهذا هو الوصف باللغة العربية."
+                        android:textSize="16sp"/>
+
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:columnCount="2"
+                        android:rowCount="2"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:id="@+id/rest1"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/wilaya_algiers"
+                            android:scaleType="centerCrop"
+                            android:onClick="onImageClick"/>
+
+                        <ImageView
+                            android:id="@+id/rest2"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/wilaya_annaba"
+                            android:scaleType="centerCrop"
+                            android:onClick="onImageClick"/>
+
+                        <ImageView
+                            android:id="@+id/rest3"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/wilaya_adrar"
+                            android:scaleType="centerCrop"
+                            android:onClick="onImageClick"/>
+
+                        <ImageView
+                            android:id="@+id/rest4"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/wilaya_algiers"
+                            android:scaleType="centerCrop"
+                            android:onClick="onImageClick"/>
+                    </GridLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Contact Section -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="TO BOOK A TRIP CONTACT US \n لحجز رحلة اتصل بنا"
                 android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textAllCaps="false" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/btn_call"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/purple"
+                    android:text="Call"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btn_sms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:backgroundTint="@color/purple"
+                    android:text="SMS"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btn_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:backgroundTint="@color/purple"
+                    android:text="Email"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+
+            <View android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="© By Amel AMINA, Salima HAMIDI, Loubna DJADO"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:background="@drawable/nav_background"/>
         </LinearLayout>
-    </HorizontalScrollView>
-
-
-    <!-- Contact Section -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="TO BOOK A TRIP CONTACT US \n لحجز رحلة اتصل بنا"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="10dp">
-
-        <Button
-            android:id="@+id/btnCall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/purple"
-            android:text="Call"
-            android:textAllCaps="false"
-            android:textColor="@color/white" />
-
-        <Button
-            android:id="@+id/btnSMS"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:backgroundTint="@color/purple"
-            android:text="SMS"
-            android:textAllCaps="false"
-            android:textColor="@color/white" />
-
-        <Button
-            android:id="@+id/btnEmail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:backgroundTint="@color/purple"
-            android:text="Email"
-            android:textAllCaps="false"
-            android:textColor="@color/white" />
-    </LinearLayout>
-
-
-    <View android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="© By Amel AMINA, Salima HAMIDI, Loubna DJADO"
-        android:textColor="@color/black"
-        android:textSize="12sp"
-        android:background="@drawable/nav_background"/>
-
-</LinearLayout>
     </ScrollView>
+</LinearLayout>
+

@@ -4,7 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageButton;
 import android.widget.TextView;
-
+import android.net.Uri;
+import android.view.View;
+import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.HashMap;
@@ -99,6 +101,46 @@ public class WilayaDetailsActivity extends AppCompatActivity {
             Intent intent = new Intent(WilayaDetailsActivity.this, MainActivity.class);
             startActivity(intent);
             finish();
+        });
+
+
+        // Initialisation des boutons
+        Button callButton = findViewById(R.id.btn_call);
+        Button smsButton = findViewById(R.id.btn_sms);
+        Button emailButton = findViewById(R.id.btn_email);
+
+        // Appel téléphonique
+        callButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent callIntent = new Intent(Intent.ACTION_DIAL);
+                callIntent.setData(Uri.parse("tel:+21329214718"));
+                startActivity(callIntent);
+            }
+        });
+
+        // Envoi de SMS
+        smsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent smsIntent = new Intent(Intent.ACTION_VIEW);
+                smsIntent.setData(Uri.parse("smsto:+21329214718"));
+                smsIntent.putExtra("sms_body", "Bonjour, je voudrais plus d'informations sur les sites touristiques.");
+                startActivity(smsIntent);
+            }
+        });
+
+        // Envoi d'Email
+        emailButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent emailIntent = new Intent(Intent.ACTION_SEND);
+                emailIntent.setType("message/rfc822");
+                emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"dta@mta.gov.dz"});
+                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Demande d'information");
+                emailIntent.putExtra(Intent.EXTRA_TEXT, "Bonjour,\n\nJe souhaite obtenir des informations sur le tourisme en Algérie.");
+                startActivity(Intent.createChooser(emailIntent, "Envoyer un email via"));
+            }
         });
     }
 }

@@ -7,7 +7,9 @@ import android.widget.TextView;
 import android.net.Uri;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ScrollView;
 import androidx.appcompat.app.AppCompatActivity;
+
 
 import java.util.HashMap;
 import java.util.Map;
@@ -15,6 +17,11 @@ import java.util.Map;
 public class WilayaDetailsActivity extends AppCompatActivity {
 
     private TextView wilayaTitle;
+
+    private ScrollView scrollView;
+
+    // Références aux sections
+    private TextView descriptionSection, sitesSection, dormirSection, mangerSection;
 
     // Dictionnaire des wilayas (Anglais -> Arabe)
     private static final Map<String, String> wilayaMap = new HashMap<>();
@@ -142,5 +149,33 @@ public class WilayaDetailsActivity extends AppCompatActivity {
                 startActivity(Intent.createChooser(emailIntent, "Envoyer un email via"));
             }
         });
+
+
+        scrollView = findViewById(R.id.scrollView);
+
+        // Associer les sections par leur ID
+        descriptionSection = findViewById(R.id.descriptionSection);
+        sitesSection = findViewById(R.id.sitesSection);
+        dormirSection = findViewById(R.id.dormirSection);
+        mangerSection = findViewById(R.id.mangerSection);
+
+        // Initialisation des boutons du menu
+        Button btnDescription = findViewById(R.id.btn_description);
+        Button btnSites = findViewById(R.id.btn_sites);
+        Button btnDormir = findViewById(R.id.btn_dormir);
+        Button btnManger = findViewById(R.id.btn_manger);
+
+        // Ajout des listeners pour défiler vers les sections
+        btnDescription.setOnClickListener(v -> scrollToView(descriptionSection));
+        btnSites.setOnClickListener(v -> scrollToView(sitesSection));
+        btnDormir.setOnClickListener(v -> scrollToView(dormirSection));
+        btnManger.setOnClickListener(v -> scrollToView(mangerSection));
+    }
+
+    /**
+     * Fonction pour faire défiler la page jusqu'à une section spécifique
+     */
+    private void scrollToView(View view){
+        scrollView.post(() -> scrollView.smoothScrollTo(0, view.getTop()));
     }
 }

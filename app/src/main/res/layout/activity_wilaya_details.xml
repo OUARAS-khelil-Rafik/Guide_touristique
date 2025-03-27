@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/white"
-        android:orientation="vertical"
-        tools:context=".WilayaDetailsActivity">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".WilayaDetailsActivity">
 
     <!-- Nav Bar Fixée en Haut -->
     <LinearLayout
@@ -39,6 +39,7 @@
 
     <!-- ScrollView pour tout le contenu en dessous de la barre de navigation -->
     <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true">
@@ -83,7 +84,7 @@
                     android:background="@drawable/nav_background">
 
                     <Button
-                        android:id="@+id/desc"
+                        android:id="@+id/btn_description"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="5dp"
@@ -91,9 +92,10 @@
                         android:background="@android:color/transparent"
                         android:textColor="@color/black"
                         android:textStyle="bold"
+                        android:clickable="true"
                         android:textAllCaps="false"/>
                     <Button
-                        android:id="@+id/site_tour"
+                        android:id="@+id/btn_sites"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="5dp"
@@ -101,9 +103,10 @@
                         android:background="@android:color/transparent"
                         android:textColor="@color/black"
                         android:textStyle="bold"
+                        android:clickable="true"
                         android:textAllCaps="false"/>
                     <Button
-                        android:id="@+id/hotel"
+                        android:id="@+id/btn_dormir"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="5dp"
@@ -111,21 +114,24 @@
                         android:background="@android:color/transparent"
                         android:textColor="@color/black"
                         android:textStyle="bold"
+                        android:clickable="true"
                         android:textAllCaps="false"/>
 
                     <Button
-                        android:id="@+id/restaurant"
+                        android:id="@+id/btn_manger"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="WHERE TO EAT?"
                         android:background="@android:color/transparent"
                         android:textColor="@color/black"
                         android:textStyle="bold"
+                        android:clickable="true"
                         android:textAllCaps="false" />
                 </LinearLayout>
             </HorizontalScrollView>
 
-        <LinearLayout
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -138,7 +144,7 @@
 
                     <!-- Section DESCRIPTION -->
                     <TextView
-                        android:id="@+id/tv_description_title"
+                        android:id="@+id/descriptionSection"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="DESCRIPTION | الوصف"
@@ -159,9 +165,9 @@
                         android:text="This is a description in English.\n\nهذا هو الوصف باللغة العربية."
                         android:textSize="16sp"/>
 
-                    <!-- Section SITES TOURISTIQUES -->
+                    <!-- Section TOURIST SITES -->
                     <TextView
-                        android:id="@+id/tv_sites_title"
+                        android:id="@+id/sitesSection"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="TOURIST SITES | المواقع السياحية"
@@ -232,9 +238,9 @@
                     </HorizontalScrollView>
 
 
-                    <!-- Section OU DORMIR ? -->
+                    <!-- Section WHERE TO SLEEP? -->
                     <TextView
-                        android:id="@+id/tv_hotel_title"
+                        android:id="@+id/dormirSection"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="WHERE TO SLEEP? | أين أنام ؟"
@@ -304,9 +310,9 @@
 
                     </HorizontalScrollView>
 
-                    <!-- Section OU MANGER ? -->
+                    <!-- Section WHERE TO EAT? -->
                     <TextView
-                        android:id="@+id/tv_restaurant_title"
+                        android:id="@+id/mangerSection"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="WHERE TO EAT? | أين آكل ؟"
@@ -377,6 +383,7 @@
                     </HorizontalScrollView>
 
                 </LinearLayout>
+
             </LinearLayout>
 
             <View
@@ -450,4 +457,3 @@
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
-

@@ -95,13 +95,6 @@
     </TabLayout>
     -->
 
-    <!-- Content Container -->
-    <FrameLayout
-        android:id="@+id/contentContainer"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
-
     <!-- Contact Section -->
     <TextView
         android:layout_width="match_parent"

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".WilayasActivity">
+
+    <!-- Nav Bar Fixée en Haut -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/nav_background"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <!-- Bouton Home -->
+        <ImageButton
+            android:id="@+id/btnHome"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:contentDescription="Home"
+            android:src="@drawable/logo_guide"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:scaleType="fitCenter"/>
+
+        <!-- Titre -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="TOURIST GUIDE  الدليل السياحي"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- ScrollView pour le Contenu -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <!-- Titre -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="LEARN ABOUT THE STATES OF ALGERIA \n تعرف على ولايات الجزائر"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- Barre de recherche -->
+            <EditText
+                android:id="@+id/searchBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:hint="Search the state ابحث عن الولاية"
+                android:textSize="15dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="15dp"
+                android:background="@drawable/search_border"/>
+
+            <!-- Grille des Wilayas -->
+            <GridView
+                android:id="@+id/gridWilayas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="2"
+                android:paddingTop="10dp"
+                android:horizontalSpacing="10dp"
+                android:verticalSpacing="10dp"
+                android:stretchMode="columnWidth" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Footer Fixé en Bas -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/nav_background"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="© By Amel AMINA, Salima HAMIDI, Loubna DJADO"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+</LinearLayout>

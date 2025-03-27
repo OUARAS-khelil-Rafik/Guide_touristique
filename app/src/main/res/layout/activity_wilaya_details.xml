@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".WilayaDetailsActivity">
+
+    <!-- Nav Bar Fixée en Haut -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/nav_background"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <!-- Bouton Home -->
+        <ImageButton
+            android:id="@+id/btnHome"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:contentDescription="Home"
+            android:src="@drawable/logo_guide"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:scaleType="fitCenter"/>
+
+        <!-- Titre -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="TOURIST GUIDE  الدليل السياحي"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Wilaya Title -->
+    <TextView
+        android:id="@+id/wilayaTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="WELCOME TO WILAYA ADRAR \n مرحبا بكم في ولاية أدرار"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- Wilaya Image -->
+    <ImageView
+        android:id="@+id/wilayaImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:paddingBottom="100dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/wilaya_adrar" />
+
+    <!-- Tab Menu
+    <TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabIndicatorColor="@color/black"
+        app:tabSelectedTextColor="@color/light_green"
+        app:tabTextColor="@color/black">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DESCRIPTION - الوصف" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabSites"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SITES TOURISTIQUES - المواقع السياحية" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabHotels"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OU DORMIR ? - أين أنام؟" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabRestaurants"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OU MANGER ? - أين آكل؟" />
+    </TabLayout>
+    -->
+
+    <!-- Content Container -->
+    <FrameLayout
+        android:id="@+id/contentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Contact Section -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="TO BOOK A TRIP \n CONTACT US"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/btnCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/purple"
+            android:text="Call"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btnSMS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="@color/purple"
+            android:text="SMS"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btnEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="@color/purple"
+            android:text="Email"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <!-- Espacement dynamique pour pousser le footer en bas -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0"/>
+
+    <!-- Footer Fixé en Bas -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="© By Amel AMINA, Salima HAMIDI, Loubna DJADO"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:background="@drawable/nav_background"/>
+
+</LinearLayout>

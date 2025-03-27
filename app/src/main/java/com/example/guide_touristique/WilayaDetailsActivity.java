@@ -1,6 +1,8 @@
 package com.example.guide_touristique;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -89,5 +91,14 @@ public class WilayaDetailsActivity extends AppCompatActivity {
         String wilayaNameArabic = wilayaMap.get(wilayaName);
 
         wilayaTitle.setText("Welcome to " + wilayaName + "\n مرحبا بكم في " + wilayaNameArabic);
+
+        ImageButton btnHome = findViewById(R.id.btnHome);
+
+        // Écouteur de clic sur le bouton Home
+        btnHome.setOnClickListener(v -> {
+            Intent intent = new Intent(WilayaDetailsActivity.this, MainActivity.class);
+            startActivity(intent);
+            finish();
+        });
     }
 }

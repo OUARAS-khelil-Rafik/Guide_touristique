@@ -62,6 +62,6 @@
         android:padding="10dp"
         android:text="© By Amel AMINA, Salima HAMIDI, Loubna DJADO"
         android:textColor="@color/black"
-        android:textSize="14sp"
+        android:textSize="12sp"
         android:background="@drawable/nav_background"/>
 </LinearLayout>

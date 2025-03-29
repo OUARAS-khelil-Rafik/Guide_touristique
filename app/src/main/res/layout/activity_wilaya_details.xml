@@ -201,42 +201,135 @@
                             android:columnCount="4"
                             android:rowCount="1">
 
-                            <ImageView
-                                android:id="@+id/site1"
-                                android:layout_width="180dp"
-                                android:layout_height="180dp"
-                                android:src="@drawable/wilaya_adrar"
-                                android:scaleType="centerCrop"
-                                android:onClick="onImageClick"/>
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15dp">
 
-                            <ImageView
-                                android:id="@+id/site2"
-                                android:layout_width="180dp"
-                                android:layout_height="180dp"
-                                android:src="@drawable/wilaya_algiers"
-                                android:scaleType="centerCrop"
-                                android:onClick="onImageClick"/>
+                                <ImageView
+                                    android:id="@+id/site1"
+                                    android:layout_width="200dp"
+                                    android:layout_height="200dp"
+                                    android:src="@drawable/site1_adrar"
+                                    android:scaleType="centerCrop" />
 
-                            <ImageView
-                                android:id="@+id/site3"
-                                android:layout_width="180dp"
-                                android:layout_height="180dp"
-                                android:src="@drawable/wilaya_annaba"
-                                android:scaleType="centerCrop"
-                                android:onClick="onImageClick"/>
+                                <TextView
+                                    android:id="@+id/site1_text"
+                                    android:layout_width="200dp"
+                                    android:layout_height="200dp"
+                                    android:background="#CC000000"
+                                    android:backgroundTint="@color/light_green"
+                                    android:text="Ancien hôpital d’Adrar"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:gravity="center"
+                                    android:ellipsize="marquee"
+                                    android:marqueeRepeatLimit="marquee_forever"
+                                    android:singleLine="false"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="true"
+                                    android:scrollHorizontally="true"
+                                    android:visibility="gone" />
+                            </FrameLayout>
 
-                            <ImageView
-                                android:id="@+id/site4"
-                                android:layout_width="180dp"
-                                android:layout_height="180dp"
-                                android:src="@drawable/wilaya_algiers"
-                                android:scaleType="centerCrop"
-                                android:onClick="onImageClick"/>
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15dp">
+
+                                <ImageView
+                                    android:id="@+id/site2"
+                                    android:layout_width="200dp"
+                                    android:layout_height="200dp"
+                                    android:src="@drawable/site2_adrar"
+                                    android:scaleType="centerCrop" />
+
+                                <TextView
+                                    android:id="@+id/site2_text"
+                                    android:layout_width="200dp"
+                                    android:layout_height="200dp"
+                                    android:background="#CC000000"
+                                    android:backgroundTint="@color/light_green"
+                                    android:text="Ancien hôpital d’Adrar"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:gravity="center"
+                                    android:ellipsize="marquee"
+                                    android:marqueeRepeatLimit="marquee_forever"
+                                    android:singleLine="false"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="true"
+                                    android:scrollHorizontally="true"
+                                    android:visibility="gone" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15dp">
+
+                                <ImageView
+                                    android:id="@+id/site3"
+                                    android:layout_width="200dp"
+                                    android:layout_height="200dp"
+                                    android:src="@drawable/site3_adrar"
+                                    android:scaleType="centerCrop" />
+
+                                <TextView
+                                    android:id="@+id/site3_text"
+                                    android:layout_width="200dp"
+                                    android:layout_height="200dp"
+                                    android:background="#CC000000"
+                                    android:backgroundTint="@color/light_green"
+                                    android:text="Ancien hôpital d’Adrar"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:gravity="center"
+                                    android:ellipsize="marquee"
+                                    android:marqueeRepeatLimit="marquee_forever"
+                                    android:singleLine="false"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="true"
+                                    android:scrollHorizontally="true"
+                                    android:visibility="gone" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/site4"
+                                    android:layout_width="200dp"
+                                    android:layout_height="200dp"
+                                    android:src="@drawable/site4_adrar"
+                                    android:scaleType="centerCrop" />
+
+                                <TextView
+                                    android:id="@+id/site4_text"
+                                    android:layout_width="200dp"
+                                    android:layout_height="200dp"
+                                    android:background="#CC000000"
+                                    android:backgroundTint="@color/light_green"
+                                    android:text="Ancien hôpital d’Adrar"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:gravity="center"
+                                    android:ellipsize="marquee"
+                                    android:marqueeRepeatLimit="marquee_forever"
+                                    android:singleLine="false"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="true"
+                                    android:scrollHorizontally="true"
+                                    android:visibility="gone" />
+                            </FrameLayout>
 
                         </GridLayout>
-
                     </HorizontalScrollView>
-
 
                     <!-- Section WHERE TO SLEEP? -->
                     <TextView
@@ -274,41 +367,137 @@
                             android:columnCount="4"
                             android:rowCount="1">
 
-                            <ImageView
-                                android:id="@+id/hotel1"
-                                android:layout_width="180dp"
-                                android:layout_height="180dp"
-                                android:src="@drawable/wilaya_annaba"
-                                android:scaleType="centerCrop"
-                                android:onClick="onImageClick"/>
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15dp">
 
-                            <ImageView
-                                android:id="@+id/hotel2"
-                                android:layout_width="180dp"
-                                android:layout_height="180dp"
-                                android:src="@drawable/wilaya_adrar"
-                                android:scaleType="centerCrop"
-                                android:onClick="onImageClick"/>
+                                <ImageView
+                                    android:id="@+id/hotel1"
+                                    android:layout_width="200dp"
+                                    android:layout_height="200dp"
+                                    android:src="@drawable/hotel1_adrar"
+                                    android:scaleType="centerCrop" />
 
-                            <ImageView
-                                android:id="@+id/hotel3"
-                                android:layout_width="180dp"
-                                android:layout_height="180dp"
-                                android:src="@drawable/wilaya_algiers"
-                                android:scaleType="centerCrop"
-                                android:onClick="onImageClick"/>
+                                <TextView
+                                    android:id="@+id/hotel1_text"
+                                    android:layout_width="200dp"
+                                    android:layout_height="200dp"
+                                    android:background="#CC000000"
+                                    android:backgroundTint="@color/light_green"
+                                    android:text="Ancien hôpital d’Adrar"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:gravity="center"
+                                    android:ellipsize="marquee"
+                                    android:marqueeRepeatLimit="marquee_forever"
+                                    android:singleLine="false"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="true"
+                                    android:scrollHorizontally="true"
+                                    android:visibility="gone"/>
+                            </FrameLayout>
 
-                            <ImageView
-                                android:id="@+id/hotel4"
-                                android:layout_width="180dp"
-                                android:layout_height="180dp"
-                                android:src="@drawable/wilaya_algiers"
-                                android:scaleType="centerCrop"
-                                android:onClick="onImageClick"/>
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15dp">
+
+                                <ImageView
+                                    android:id="@+id/hotel2"
+                                    android:layout_width="200dp"
+                                    android:layout_height="200dp"
+                                    android:src="@drawable/hotel2_adrar"
+                                    android:scaleType="centerCrop"/>
+
+                                <TextView
+                                    android:id="@+id/hotel2_text"
+                                    android:layout_width="200dp"
+                                    android:layout_height="200dp"
+                                    android:background="#CC000000"
+                                    android:backgroundTint="@color/light_green"
+                                    android:text="Ancien hôpital d’Adrar"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:gravity="center"
+                                    android:ellipsize="marquee"
+                                    android:marqueeRepeatLimit="marquee_forever"
+                                    android:singleLine="false"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="true"
+                                    android:scrollHorizontally="true"
+                                    android:visibility="gone"/>
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15dp">
+
+                                <ImageView
+                                    android:id="@+id/hotel3"
+                                    android:layout_width="200dp"
+                                    android:layout_height="200dp"
+                                    android:src="@drawable/hotel3_adrar"
+                                    android:scaleType="centerCrop" />
+
+                                <TextView
+                                    android:id="@+id/hotel3_text"
+                                    android:layout_width="200dp"
+                                    android:layout_height="200dp"
+                                    android:background="#CC000000"
+                                    android:backgroundTint="@color/light_green"
+                                    android:text="Ancien hôpital d’Adrar"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:gravity="center"
+                                    android:ellipsize="marquee"
+                                    android:marqueeRepeatLimit="marquee_forever"
+                                    android:singleLine="false"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="true"
+                                    android:scrollHorizontally="true"
+                                    android:visibility="gone"/>
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/hotel4"
+                                    android:layout_width="200dp"
+                                    android:layout_height="200dp"
+                                    android:src="@drawable/hotel4_adrar"
+                                    android:scaleType="centerCrop" />
+
+                                <TextView
+                                    android:id="@+id/hotel4_text"
+                                    android:layout_width="200dp"
+                                    android:layout_height="200dp"
+                                    android:background="#CC000000"
+                                    android:backgroundTint="@color/light_green"
+                                    android:text="Ancien hôpital d’Adrar"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:gravity="center"
+                                    android:ellipsize="marquee"
+                                    android:marqueeRepeatLimit="marquee_forever"
+                                    android:singleLine="false"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="true"
+                                    android:scrollHorizontally="true"
+                                    android:visibility="gone"/>
+                            </FrameLayout>
 
                         </GridLayout>
 
                     </HorizontalScrollView>
+
 
                     <!-- Section WHERE TO EAT? -->
                     <TextView
@@ -346,37 +535,132 @@
                             android:columnCount="4"
                             android:rowCount="1">
 
-                            <ImageView
-                                android:id="@+id/restaurant1"
-                                android:layout_width="180dp"
-                                android:layout_height="180dp"
-                                android:src="@drawable/wilaya_adrar"
-                                android:scaleType="centerCrop"
-                                android:onClick="onImageClick"/>
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15dp">
 
-                            <ImageView
-                                android:id="@+id/restaurant2"
-                                android:layout_width="180dp"
-                                android:layout_height="180dp"
-                                android:src="@drawable/wilaya_algiers"
-                                android:scaleType="centerCrop"
-                                android:onClick="onImageClick"/>
+                                <ImageView
+                                    android:id="@+id/restaurant1"
+                                    android:layout_width="200dp"
+                                    android:layout_height="200dp"
+                                    android:src="@drawable/restaurant1_adrar"
+                                    android:scaleType="centerCrop" />
 
-                            <ImageView
-                                android:id="@+id/restaurant3"
-                                android:layout_width="180dp"
-                                android:layout_height="180dp"
-                                android:src="@drawable/wilaya_algiers"
-                                android:scaleType="centerCrop"
-                                android:onClick="onImageClick"/>
+                                <TextView
+                                    android:id="@+id/restaurant1_text"
+                                    android:layout_width="200dp"
+                                    android:layout_height="200dp"
+                                    android:background="#CC000000"
+                                    android:backgroundTint="@color/light_green"
+                                    android:text="Ancien hôpital d’Adrar"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:gravity="center"
+                                    android:ellipsize="marquee"
+                                    android:marqueeRepeatLimit="marquee_forever"
+                                    android:singleLine="false"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="true"
+                                    android:scrollHorizontally="true"
+                                    android:visibility="gone"/>
+                            </FrameLayout>
 
-                            <ImageView
-                                android:id="@+id/restaurant4"
-                                android:layout_width="180dp"
-                                android:layout_height="180dp"
-                                android:src="@drawable/wilaya_annaba"
-                                android:scaleType="centerCrop"
-                                android:onClick="onImageClick"/>
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15dp">
+
+                                <ImageView
+                                    android:id="@+id/restaurant2"
+                                    android:layout_width="200dp"
+                                    android:layout_height="200dp"
+                                    android:src="@drawable/restaurant2_adrar"
+                                    android:scaleType="centerCrop" />
+
+                                <TextView
+                                    android:id="@+id/restaurant2_text"
+                                    android:layout_width="200dp"
+                                    android:layout_height="200dp"
+                                    android:background="#CC000000"
+                                    android:backgroundTint="@color/light_green"
+                                    android:text="Ancien hôpital d’Adrar"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:gravity="center"
+                                    android:ellipsize="marquee"
+                                    android:marqueeRepeatLimit="marquee_forever"
+                                    android:singleLine="false"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="true"
+                                    android:scrollHorizontally="true"
+                                    android:visibility="gone"/>
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15dp">
+
+                                <ImageView
+                                    android:id="@+id/restaurant3"
+                                    android:layout_width="200dp"
+                                    android:layout_height="200dp"
+                                    android:src="@drawable/restaurant3_adrar"
+                                    android:scaleType="centerCrop" />
+
+                                <TextView
+                                    android:id="@+id/restaurant3_text"
+                                    android:layout_width="200dp"
+                                    android:layout_height="200dp"
+                                    android:background="#CC000000"
+                                    android:backgroundTint="@color/light_green"
+                                    android:text="Ancien hôpital d’Adrar"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:gravity="center"
+                                    android:ellipsize="marquee"
+                                    android:marqueeRepeatLimit="marquee_forever"
+                                    android:singleLine="false"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="true"
+                                    android:scrollHorizontally="true"
+                                    android:visibility="gone"/>
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/restaurant4"
+                                    android:layout_width="200dp"
+                                    android:layout_height="200dp"
+                                    android:src="@drawable/restaurant4_adrar"
+                                    android:scaleType="centerCrop" />
+
+                                <TextView
+                                    android:id="@+id/restaurant4_text"
+                                    android:layout_width="200dp"
+                                    android:layout_height="200dp"
+                                    android:background="#CC000000"
+                                    android:backgroundTint="@color/light_green"
+                                    android:text="Ancien hôpital d’Adrar"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:gravity="center"
+                                    android:ellipsize="marquee"
+                                    android:marqueeRepeatLimit="marquee_forever"
+                                    android:singleLine="false"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="true"
+                                    android:scrollHorizontally="true"
+                                    android:visibility="gone"/>
+                            </FrameLayout>
 
                         </GridLayout>
 

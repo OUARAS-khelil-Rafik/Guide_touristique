@@ -416,7 +416,7 @@ public class WilayaDetailsActivity extends AppCompatActivity {
         smsButton.setOnClickListener(v -> {
             Intent smsIntent = new Intent(Intent.ACTION_VIEW);
             smsIntent.setData(Uri.parse("smsto:+21329214718"));
-            smsIntent.putExtra("sms_body", "Bonjour, je voudrais plus d'informations sur les sites touristiques.");
+            smsIntent.putExtra("sms_body", "Hello, I would like more information about tourist sites. \n مرحبًا، أرغب في الحصول على مزيد من المعلومات حول الأماكن السياحية.");
             startActivity(smsIntent);
         });
 
@@ -425,7 +425,12 @@ public class WilayaDetailsActivity extends AppCompatActivity {
             emailIntent.setType("message/rfc822");
             emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"dta@mta.gov.dz"});
             emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Demande d'information");
-            emailIntent.putExtra(Intent.EXTRA_TEXT, "Bonjour,\n\nJe souhaite obtenir des informations sur le tourisme en Algérie.");
+            emailIntent.putExtra(Intent.EXTRA_TEXT, "Hello,\n" +
+                    "\n" +
+                    "I would like information about tourism in Algeria.\n\n" +
+                    "صباح الخير،\n" +
+                    "\n" +
+                    "أريد الحصول على معلومات عن السياحة في الجزائر.");
             startActivity(Intent.createChooser(emailIntent, "Envoyer un email via"));
         });
     }

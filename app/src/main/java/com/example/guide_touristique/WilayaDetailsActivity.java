@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ScrollView;
 import android.widget.ImageView;
-import android.graphics.Color;
 import android.view.MotionEvent;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -64,6 +63,10 @@ public class WilayaDetailsActivity extends AppCompatActivity {
         updateUI(wilayaName);
         initContactButtons();
         initMenuButtons();
+
+        // Gestion du bouton Home
+        ImageButton btnHome = findViewById(R.id.btnHome);
+        btnHome.setOnClickListener(v -> onBackPressed());
     }
 
     private void initViews() {
@@ -79,8 +82,63 @@ public class WilayaDetailsActivity extends AppCompatActivity {
     private void initData() {
         // Initialisation des noms de wilayas (Anglais -> Arabe)
         wilayaMap.put("Adrar", "أدرار");
+        wilayaMap.put("Chlef", "الشلف");
+        wilayaMap.put("Laghouat", "الأغواط");
+        wilayaMap.put("Oum El Bouaghi", "أم البواقي");
+        wilayaMap.put("Batna", "باتنة");
+        wilayaMap.put("Bejaia", "بجاية");
+        wilayaMap.put("Biskra", "بسكرة");
+        wilayaMap.put("Bechar", "بشار");
+        wilayaMap.put("Blida", "البليدة");
+        wilayaMap.put("Bouira", "البويرة");
+        wilayaMap.put("Tamanrasset", "تمنراست");
+        wilayaMap.put("Tebessa", "تبسة");
+        wilayaMap.put("Tlemcen", "تلمسان");
+        wilayaMap.put("Tiaret", "تيارت");
+        wilayaMap.put("Tizi Ouzou", "تيزي وزو");
         wilayaMap.put("Algiers", "الجزائر");
-        // Ajouter les autres wilayas...
+        wilayaMap.put("Djelfa", "الجلفة");
+        wilayaMap.put("Jijel", "جيجل");
+        wilayaMap.put("Setif", "سطيف");
+        wilayaMap.put("Saida", "سعيدة");
+        wilayaMap.put("Skikda", "سكيكدة");
+        wilayaMap.put("Sidi Bel Abbes", "سيدي بلعباس");
+        wilayaMap.put("Annaba", "عنابة");
+        wilayaMap.put("Guelma", "قالمة");
+        wilayaMap.put("Constantine", "قسنطينة");
+        wilayaMap.put("Medea", "المدية");
+        wilayaMap.put("Mostaganem", "مستغانم");
+        wilayaMap.put("Msila", "المسيلة");
+        wilayaMap.put("Mascara", "معسكر");
+        wilayaMap.put("Ouargla", "ورقلة");
+        wilayaMap.put("Oran", "وهران");
+        wilayaMap.put("El Bayadh", "البيض");
+        wilayaMap.put("Illizi", "إليزي");
+        wilayaMap.put("Bordj Bou Arreridj", "برج بوعريريج");
+        wilayaMap.put("Boumerdes", "بومرداس");
+        wilayaMap.put("El Tarf", "الطارف");
+        wilayaMap.put("Tindouf", "تندوف");
+        wilayaMap.put("Tissemsilt", "تيسمسيلت");
+        wilayaMap.put("El Oued", "الوادي");
+        wilayaMap.put("Khenchela", "خنشلة");
+        wilayaMap.put("Souk Ahras", "سوق أهراس");
+        wilayaMap.put("Tipaza", "تيبازة");
+        wilayaMap.put("Mila", "ميلة");
+        wilayaMap.put("Ain Defla", "عين الدفلى");
+        wilayaMap.put("Naama", "النعامة");
+        wilayaMap.put("Ain Temouchent", "عين تموشنت");
+        wilayaMap.put("Ghardaia", "غرداية");
+        wilayaMap.put("Relizane", "غليزان");
+        wilayaMap.put("Timimoun", "تيميمون");
+        wilayaMap.put("Bordj Badji Mokhtar", "برج باجي مختار");
+        wilayaMap.put("Ouled Djellal", "أولاد جلال");
+        wilayaMap.put("Beni Abbes", "بني عباس");
+        wilayaMap.put("In Salah", "عين صالح");
+        wilayaMap.put("In Guezzam", "عين قزام");
+        wilayaMap.put("Touggourt", "تقرت");
+        wilayaMap.put("Djanet", "جانت");
+        wilayaMap.put("El M'Ghair", "المغير");
+        wilayaMap.put("El Menia", "المنيعة");
 
         // Initialisation des images principales
         wilayaImageMap.put("Adrar", R.drawable.wilaya_adrar);
@@ -88,14 +146,153 @@ public class WilayaDetailsActivity extends AppCompatActivity {
         // Ajouter les autres images...
 
         // Initialisation des descriptions
-        descriptionMap.put("Adrar", "Adrar is known for its desert landscapes.\n أدرار معروفة بمناظرها الصحراوية.");
-        descriptionMap.put("Algiers", "Algiers, the capital of Algeria.\n الجزائر، عاصمة الجزائر.");
+        descriptionMap.put("Adrar", "Adrar is known for its vast desert landscapes, ancient ksars (fortified villages), and the stunning Tassili N'Ajjer rock formations. The region is a gateway to the Sahara and offers unique cultural heritage.\n أدرار معروفة بمناظرها الصحراوية الشاسعة، قصورها القديمة (القرى المحصنة)، وتشكيلات تاسيلي ناجر الصخرية المذهلة. المنطقة تعتبر بوابة للصحراء وتوفر تراثاً ثقافياً فريداً.");
+
+        descriptionMap.put("Algiers", "Algiers, the capital of Algeria, is a vibrant coastal city blending French colonial architecture with modern developments. Key landmarks include the Casbah (a UNESCO World Heritage Site), the Great Mosque, and the Martyrs' Memorial.\n الجزائر، عاصمة الجزائر، هي مدينة ساحلية نابضة بالحياة تجمع بين العمارة الاستعمارية الفرنسية والتطورات الحديثة. من أبرز معالمها القصبة (موقع تراث عالمي لليونسكو)، الجامع الكبير، ونصب الشهداء.");
+
+        descriptionMap.put("Oran", "Oran is a major port city on the Mediterranean, famous for its Rai music, historical sites like Santa Cruz Fort, and vibrant nightlife. It combines Spanish, French, and Algerian influences.\n وهران هي مدينة ميناء كبرى على البحر الأبيض المتوسط، تشتهر بموسيقى الراي، المواقع التاريخية مثل حصن سانتا كروز، وحياة ليلية نابضة بالحياة. تجمع بين التأثيرات الإسبانية والفرنسية والجزائرية.");
+
+        descriptionMap.put("Constantine", "Constantine, the 'City of Bridges,' is perched on rocky cliffs and features breathtaking gorges, historic palaces, and the iconic Sidi M'Cid suspension bridge.\n قسنطينة، 'مدينة الجسور،' تقع على منحدرات صخرية وتتميز بمناظر الخوانق الرائعة، القصور التاريخية، وجسر سيدي مسيد المعلق الشهير.");
         // Ajouter les autres descriptions...
 
         // Initialisation des textes généraux
-        sitesMap.put("Adrar", "Tourist sites in Adrar");
-        hotelMap.put("Adrar", "Hotels in Adrar");
-        restaurantMap.put("Adrar", "Restaurants in Adrar");
+        sitesMap.put("Adrar",
+                "Tourist sites in Adrar:\n" +
+                        "• Ancient Hospital of Adrar: A historic colonial-era building.\n" +
+                        "• Oukdim Palace: A traditional Saharan fortress with unique architecture.\n" +
+                        "• Cheikh Sidi Mohamed Belkabir Mosque: A spiritual center with beautiful Saharan design.\n" +
+                        "• Melaka Kasbah: A well-preserved ksar (fortified village).\n\n" +
+                        "مواقع سياحية في أدرار:\n" +
+                        "• المستشفى القديم لأدرار : مبنى تاريخي من العهد الاستعماري.\n" +
+                        "• قصر أوكديم : حصن صحراوي تقليدي بهندسة معمارية فريدة.\n" +
+                        "• مسجد الشيخ سيدي محمد البلكبير : مركز روحاني بتصميم صحراوي جميل.\n" +
+                        "• قصبة ملاكة : قصر محصّن محفوظ جيداً.");
+        sitesMap.put("Algiers",
+                "Tourist sites in Algiers:\n" +
+                        "• Casbah of Algiers: UNESCO-listed ancient medina with Ottoman-era architecture.\n" +
+                        "• Martyrs' Memorial: Iconic monument honoring Algeria’s independence war.\n" +
+                        "• Sablette Parc: A seaside park with stunning Mediterranean views.\n" +
+                        "• Dounia Parc: Family-friendly amusement park.\n\n" +
+                        "مواقع سياحية في الجزائر:\n" +
+                        "• قصبة الجزائر : مدينة قديمة مدرجة في اليونسكو بهندسة عثمانية.\n" +
+                        "• نصب الشهداء : معلم شهير يخلد حرب التحرير الجزائرية.\n" +
+                        "• حديقة السابلات : حديقة ساحلية بإطلالات رائعة على البحر.\n" +
+                        "• حديقة دنيا : مدينة ألعاب عائلية.");
+        sitesMap.put("Oran",
+                "Tourist sites in Oran:\n" +
+                        "• Santa Cruz Fort: A historic Spanish fortress with panoramic city & sea views.\n" +
+                        "• Bey’s Palace: 18th-century Ottoman palace showcasing Moorish architecture.\n" +
+                        "• Le Théâtre d’Oran: A beautifully restored French colonial-era theater.\n" +
+                        "• Front de Mer Promenade: Scenic coastal walkway with cafes and beaches.\n\n" +
+                        "مواقع سياحية في وهران:\n" +
+                        "• حصن سانتا كروز : قلعة إسبانية تاريخية بإطلالة بانورامية على المدينة والبحر.\n" +
+                        "• قصر الباي : قصر عثماني من القرن الـ18 يجسد العمارة المغاربية.\n" +
+                        "• مسرح وهران : مسرح فرنسي قديم تم ترميمه بشكل رائع.\n" +
+                        "• كورنيش وهران : ممشى ساحلي خلاب مع مقاهي وشواطئ.");
+        sitesMap.put("Constantine",
+                "Tourist sites in Constantine:\n" +
+                        "• Sidi M’Cid Bridge: A dramatic suspension bridge over the Rhumel Gorge.\n" +
+                        "• Ahmed Bey Palace: 19th-century palace with intricate mosaics and gardens.\n" +
+                        "• Emir Abdelkader Mosque: One of Africa’s largest mosques with stunning design.\n" +
+                        "• Cirta Museum: Showcases Roman and Numidian artifacts.\n\n" +
+                        "مواقع سياحية في قسنطينة:\n" +
+                        "• جسر سيدي مسيد : جسر معلق مذهل فوق وادي الرمال.\n" +
+                        "• قصر أحمد باي : قصر من القرن الـ19 بفسيفساء وحدائق رائعة.\n" +
+                        "• مسجد الأمير عبد القادر : أحد أكبر المساجد في إفريقيا بتصميم خلاب.\n" +
+                        "• متحف سيرتا : يعرض قطعاً أثرية رومانية ونوميدية.");
+
+
+
+        hotelMap.put("Adrar",
+                "Hotels in Adrar:\n" +
+                        "• TOUAT Hotel: Comfortable stay with Saharan hospitality.\n" +
+                        "• Mraguen Adrar Saoura Hotel: Modern amenities in a desert setting.\n" +
+                        "• AGADIR Hotel: Known for its traditional decor.\n" +
+                        "• TAKIALT Hotel: Budget-friendly option near major sites.\n\n" +
+                        "فنادق في أدرار:\n" +
+                        "• فندق توات : إقامة مريحة مع كرم الضيافة الصحراوية.\n" +
+                        "• فندق مرقن أدرار الساورة : مرافق حديثة في وسط صحراوي.\n" +
+                        "• فندق أغادير : معروف بديكوره التقليدي.\n" +
+                        "• فندق تاقيلت : خيار اقتصادي قرب المعالم السياحية.");
+        hotelMap.put("Algiers",
+                "Hotels in Algiers:\n" +
+                        "• Hilton Hotel: Luxury stay with sea views.\n" +
+                        "• Hyatt Regency Hotel: High-end accommodations in the city center.\n" +
+                        "• Sofitel Hamma Hotel: Elegant French-inspired hotel.\n" +
+                        "• Marriott Hotel Bab Ezzouar: Business-friendly with modern facilities.\n\n" +
+                        "فنادق في الجزائر:\n" +
+                        "• فندق هيلتون : إقامة فاخرة مع إطلالة على البحر.\n" +
+                        "• فندق حياة ريجنسي : إقامة راقية في وسط المدينة.\n" +
+                        "• فندق سوفيتيل حامة : فندق أنيق على الطراز الفرنسي.\n" +
+                        "• فندق ماريوت باب الزوار : مناسب لرجال الأعمال بمرافق حديثة.");
+        hotelMap.put("Oran",
+                "Hotels in Oran:\n" +
+                        "• Sheraton Oran Hotel: Luxury beachfront hotel with pools and spas.\n" +
+                        "• Mercure Oran Hotel: Modern hotel near the city center.\n" +
+                        "• Ibis Oran Hotel: Budget-friendly option with reliable service.\n" +
+                        "• Royal Hotel Oran: Historic hotel with Art Deco influences.\n\n" +
+                        "فنادق في وهران:\n" +
+                        "• فندق شيراتون وهران : فندق فاخر على الشاطئ مع مسابح ومنتجعات صحية.\n" +
+                        "• فندق ميركور وهران : فندق حديث قرب وسط المدينة.\n" +
+                        "• فندق إيبيس وهران : خيار اقتصادي مع خدمة موثوقة.\n" +
+                        "• فندق رويال وهران : فندق تاريخي بتأثيرات آرت ديكو.");
+        hotelMap.put("Constantine",
+                "Hotels in Constantine:\n" +
+                        "• Ibis Constantine Hotel: Reliable chain hotel with city views.\n" +
+                        "• Méridien Constantine Hotel: Luxury option with a rooftop pool.\n" +
+                        "• Hotel Les Emirides: Mid-range hotel near historical sites.\n" +
+                        "• Hotel Constantine: Budget stay with traditional charm.\n\n" +
+                        "فنادق في قسنطينة:\n" +
+                        "• فندق إيبيس قسنطينة : فندق سلسلة موثوقة بإطلالة على المدينة.\n" +
+                        "• فندق ميريديان قسنطينة : خيار فاخر مع مسبح على السطح.\n" +
+                        "• فندق الأمراء : فندق متوسط المستوى قرب المواقع التاريخية.\n" +
+                        "• فندق قسنطينة : إقامة اقتصادية بسحر تقليدي.");
+
+
+        restaurantMap.put("Adrar",
+                "Restaurants in Adrar:\n" +
+                        "• Mraguen Restaurant: Offers traditional Algerian dishes.\n" +
+                        "• Dar Adrar Restaurant: Authentic Saharan cuisine in a cultural setting.\n" +
+                        "• PALAIS BAB SAHRA Restaurant: Fine dining with local flavors.\n" +
+                        "• Remontada Restaurant: Popular for grilled meats and tajines.\n\n" +
+                        "مطاعم في أدرار:\n" +
+                        "• مطعم مرقن : يقدم أطباق جزائرية تقليدية.\n" +
+                        "• مطعم دار أدرار : أكلات صحراوية أصيلة في جو ثقافي.\n" +
+                        "• مطعم قصر باب الصحراء : تجربة طعام راقية بنكهات محلية.\n" +
+                        "• مطعم ريمونتادا : مشهور باللحوم المشوية والطاجين.");
+        restaurantMap.put("Algiers",
+                "Restaurants in Algiers:\n" +
+                        "• Casbah Istanbul Restaurant: Mix of Algerian and Turkish cuisine.\n" +
+                        "• Holiday Inn Restaurant: International dishes in a hotel setting.\n" +
+                        "• Mega Pizza Restaurant: Popular for fast food and pizzas.\n" +
+                        "• Al Fakhama Restaurant: High-end seafood and traditional meals.\n\n" +
+                        "مطاعم في الجزائر:\n" +
+                        "• مطعم قصبة إسطنبول : مزيج من المطبخ الجزائري والتركي.\n" +
+                        "• مطعم هوليداي إن : أطباق عالمية في جو فندقي.\n" +
+                        "• مطعم ميجا بيتزا : مشهور بالوجبات السريعة والبيتزا.\n" +
+                        "• مطعم الفخامة : أطباق بحرية فاخرة وأكلات تقليدية.");
+        restaurantMap.put("Oran",
+                "Restaurants in Oran:\n" +
+                        "• Le Petit Rocher: Famous for fresh seafood and Mediterranean dishes.\n" +
+                        "• Restaurant El Bahia: Serves authentic Oranese cuisine like karantika.\n" +
+                        "• La Dégustation: Fine dining with French-Algerian fusion.\n" +
+                        "• Café Santa Cruz: Iconic café near the fort with Spanish-inspired snacks.\n\n" +
+                        "مطاعم في وهران:\n" +
+                        "• مطعم لو بيتي روشيه : مشهور بالمأكولات البحرية والأطباق المتوسطية.\n" +
+                        "• مطعم الباهية : يقدم أكلات وهرانية أصيلة مثل الكارنتيكا.\n" +
+                        "• مطعم لا ديغوستاسيون : أكلات راقية بمزيج فرنسي-جزائري.\n" +
+                        "• مقهى سانتا كروز : مقهى شهير قرب الحصن يقدم وجبات خفيفة إسبانية.");
+        restaurantMap.put("Constantine",
+                "Restaurants in Constantine:\n" +
+                        "• Restaurant Le Majestic: Elegant dining with Algerian-French cuisine.\n" +
+                        "• Dar El Hamra: Traditional dishes in a historic house setting.\n" +
+                        "• Le Panoramique: Offers cliffside views and local specialties.\n" +
+                        "• Café Diwan: Cozy spot for coffee and Constantine-style pastries.\n\n" +
+                        "مطاعم في قسنطينة:\n" +
+                        "• مطعم لوماجستيك : أكلات راقية بمزيج جزائري-فرنسي.\n" +
+                        "• مطعم دار الحمراء : أطباق تقليدية في جو منزل تاريخي.\n" +
+                        "• مطعم لوبانوراميك : إطلالات على المنحدرات وأكلات محلية.\n" +
+                        "• مقهى ديوان : مكان مريح للقهوة وحلويات قسنطينية.");
         // Ajouter les autres...
 
         // Initialisation des images et descriptions pour les sites, hôtels et restaurants
@@ -103,7 +300,7 @@ public class WilayaDetailsActivity extends AppCompatActivity {
                 new Integer[]{R.drawable.site1_adrar, R.drawable.site2_adrar, R.drawable.site3_adrar, R.drawable.site4_adrar},
                 new String[]{"Ancien hôpital d'Adrar", "Palais Oukdim", "Mosquée Cheikh Sidi Mohamed Belkabir", "Kasbah Melaka"},
                 new Integer[]{R.drawable.hotel1_adrar, R.drawable.hotel2_adrar, R.drawable.hotel3_adrar, R.drawable.hotel4_adrar},
-                new String[]{"TOUAT Hotel", "Mraguen Adrar Saoura Hotel", "AGADIR Hotel", "TAKIALT Hotel"},
+                new String[]{"TOUAT Hotel \n 4000DZ/Night", "Mraguen Adrar Saoura Hotel \n 8000DZ/Night", "AGADIR Hotel \n 5500DZ/Night", "TAKIALT Hotel \n 4500DZ/Night"},
                 new Integer[]{R.drawable.restaurant1_adrar, R.drawable.restaurant2_adrar, R.drawable.restaurant3_adrar, R.drawable.restaurant4_adrar},
                 new String[]{"Mraguen Restaurant", "Dar Adrar Restaurant", "PALAIS BAB SAHRA Restaurant", "Remontada Restaurant"});
 
@@ -111,7 +308,7 @@ public class WilayaDetailsActivity extends AppCompatActivity {
                 new Integer[]{R.drawable.site1_algiers, R.drawable.site2_algiers, R.drawable.site3_algiers, R.drawable.site4_algiers},
                 new String[]{"Casbah d'Alger", "Monument des Martyrs", "Sablette Parc", "Dounia Parc"},
                 new Integer[]{R.drawable.hotel1_algiers, R.drawable.hotel2_algiers, R.drawable.hotel3_algiers, R.drawable.hotel4_algiers},
-                new String[]{"Hilton Hotel", "Hyatt Regency Hotel", "Sofitel Hamma Hotel", "Marriott Hotel Bab Ezzouar"},
+                new String[]{"Hilton Hotel \n 6500DZ/Night", "Hyatt Regency Hotel \n 9000DZ/Night", "Sofitel Hamma Hotel \n 7500DZ/Night", "Marriott Hotel Bab Ezzouar \n 6000DZ/Night"},
                 new Integer[]{R.drawable.restaurant1_algiers, R.drawable.restaurant2_algiers, R.drawable.restaurant3_algiers, R.drawable.restaurant4_algiers},
                 new String[]{"Casbah Istanbul Restaurant", "Holiday Inn Restaurant", "Mega Pizza Restaurant", "Al Fakhama Restaurant"});
     }
@@ -247,12 +444,5 @@ public class WilayaDetailsActivity extends AppCompatActivity {
 
     private void scrollToView(View view) {
         scrollView.post(() -> scrollView.smoothScrollTo(0, view.getTop() - 50));
-    }
-
-    // Gestion du bouton Home
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        finish();
     }
 }
